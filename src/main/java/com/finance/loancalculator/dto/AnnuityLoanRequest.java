@@ -1,5 +1,6 @@
 package com.finance.loancalculator.dto;
 
+import lombok.Builder;
 import lombok.Data;
 
 import javax.validation.constraints.DecimalMin;
@@ -7,6 +8,7 @@ import javax.validation.constraints.Min;
 import java.time.LocalDateTime;
 
 @Data
+@Builder
 public class AnnuityLoanRequest {
 
   @DecimalMin(value = "0.01", message = "The loan amount must be at least 0.01")
